@@ -1,12 +1,19 @@
-import React from 'react'
+import React from 'react';
 
 const Message = (props) => {
-  const {name, text} = props
+  const { name, text } = props;
   return (
     <div>
-      <span><strong>{name}:</strong> {text}</span>
+      <span>
+        <strong>
+          {name}
+          :
+        </strong>
+        {' '}
+        {text}
+      </span>
     </div>
-  )
-}
+  );
+};
 
-export default Message
+export default Message;
