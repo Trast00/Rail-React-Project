@@ -6,11 +6,9 @@ import Message from './Message';
 
 const Messages = () => {
   const messages = useSelector((state) => state.messageReducer.messages);
-  console.log(messages);
   const dispatch = useDispatch();
   useEffect(() => {
-    console.log('useEffect');
-    if (messages) {
+    if (messages.length < 5) {
       dispatch(fetchMessages());
     }
   }, [dispatch, messages.length]);

@@ -3,7 +3,8 @@ module Api
     class MessagesController < ApplicationController
       def index
         @items = Message.all
-        render json: @items
+        @item = @items.sample
+        render json: @item
       end
     end
   end
